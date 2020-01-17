@@ -27,9 +27,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'UserController', ['except' => ['show']]);
-	
-	Route::get('manage', ['as' => 'manage.edit', 'uses' => 'CostsController@edit']);
-	Route::put('manage', ['as' => 'manage.update', 'uses' => 'CostsController@update']);
+
+	Route::get('costs', ['as' => 'costs.show', 'uses' => 'CostsController@show']);
+	Route::put('costs', ['as' => 'costs.update', 'uses' => 'CostsController@update']);
 
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);

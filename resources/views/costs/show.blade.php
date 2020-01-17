@@ -18,7 +18,7 @@
                             <h3 class="mb-0">{{ __('User Management') }}</h3>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('user.index') }}" class="btn btn-primary btn-round">{{ __('Back to list') }}</a>
+                            <a href="{{ route('user.index') }}" class="btn btn-primary btn-round">{{ __('Créer une dépense') }}</a>
                         </div>
                     </div>
                 </div>

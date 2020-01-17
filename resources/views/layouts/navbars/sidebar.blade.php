@@ -28,8 +28,8 @@
         </a>
         <div class="collapse show" id="laravelExamples">
           <ul class="nav">
-            <li class="@if ($activePage == 'manage') active @endif">
-              <a href="{{ route('manage.edit') }}">
+            <li class="@if ($activePage == 'costs') active @endif">
+              <a href="{{ route('costs.show') }}">
                 <i class="now-ui-icons business_money-coins"></i>
                 <p> {{ __("Gérer les dépenses") }} </p>
               </a>
