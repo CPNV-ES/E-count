@@ -11,4 +11,9 @@ class CostsController extends Controller
     {
         return view('costs.show');
     }
+
+    public function create()
+    {
+        return view('costs.create');
+    }
 }
