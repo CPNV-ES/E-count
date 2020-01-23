@@ -2,6 +2,7 @@
 | ------------- | -------------------- | ---------- |
 | Oberson Gaël  | Création du document | 20.12.2019 |
 | Pasteur Kévin | Refactor du document | 10.01.2020 |
+| Pasteur Kévin | Ajout Installation Composer + NPM | 23.01.2020 |
 
 # Création du projet Laravel
 
@@ -23,6 +24,9 @@
 ## Prérequis
 
 - PHP 7.3
+
+## Installation de Composer
+## Installation de NPM
 
 ## Installation de MongoDB
 
