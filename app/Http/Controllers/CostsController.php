@@ -15,22 +15,22 @@ class CostsController extends Controller
     public function show()
     {
         $id = auth()->user()->_id;
-        $costs=Cost::where('users.id', $id)->get();
+        $costsArray = [];
+        $costs=Cost::where('users', $id)->get();
 
+ 
         foreach(json_decode($costs) as $cost) {
             
-            $costsArray[] = Array(
+            $costsArray = Array(
                 "id" => $cost->_id,
                 "date" => $cost->date,
                 "description" => $cost->description,
                 "price" => $cost->price,
-                "status" => Status::where('_id', $cost->status->id)->value('name'),
-                "waysOfPayment" => WaysOfPayment::where('_id', $cost->waysOfPayment->id)->value('name'),
-                "categories" => Categories::where('_id', $cost->categories->id)->value('name')
-            );
-            
-        }
-       
+                "status" => Status::where('_id', $cost->status)->value('name'),
+                "waysOfPayment" => WaysOfPayment::where('_id', $cost->waysOfPayment)->value('name'),
+                "categories" => Categories::where('_id', $cost->categories)->value('name')
+            );     
+        }  
         return view('costs.show',compact('costsArray'));
     }
 

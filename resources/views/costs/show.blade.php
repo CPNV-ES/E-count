@@ -27,16 +27,14 @@
                 <th>Options</th>
               </thead>
               <tbody>
-                @foreach($costsArray as $cost)
-                  <tr>
-                    <td>{{$cost['date']}}</td>
-                    <td>{{$cost['categories']}}</td>
-                    <td>{{$cost['price']}}</td>
-                    <td>{{$cost['waysOfPayment']}}</td>
-                    <td>{{$cost['status']}}</td>
-                    <td>Edit</td>
-                  </tr>
-                @endforeach
+                    <tr>
+                      <td>{{$costsArray['date'] ?? '' }}</td>
+                      <td>{{$costsArray['categories'] ?? ''}}</td>
+                      <td>{{$costsArray['price'] ?? ''}}</td>
+                      <td>{{$costsArray['waysOfPayment'] ?? ''}}</td>
+                      <td>{{$costsArray['status'] ?? ''}}</td>
+                      <td>Edit</td>
+                    </tr>
               </tbody>
             </table>
           </div>
