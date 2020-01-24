@@ -57,7 +57,7 @@
                       <label for="exampleInputEmail1">{{__("Catégories")}}</label>
                       <select name="categories" class="form-control">
                         @foreach($categories as $cat)
-                          <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                          <option value="{{ $cat->slug }}">{{ $cat->name }}</option>
                         @endforeach
                       </select>
                       @include('alerts.feedback', ['field' => 'categories'])
@@ -83,7 +83,7 @@
                       <label for="exampleInputEmail1">{{__(" Moyen de payement")}}</label>
                       <select name="waysOfPayment" class="form-control">
                         @foreach($waysOfPayment as $payment)
-                          <option value="{{ $payment->id }}">{{ $payment->name }}</option>
+                          <option value="{{ $payment->slug }}">{{ $payment->name }}</option>
                         @endforeach
                       </select>
                       @include('alerts.feedback', ['field' => 'waysOfPayment'])
@@ -98,7 +98,7 @@
                       <label for="exampleInputEmail1">{{__(" Statut")}}</label>
                       <select name="status" class="form-control">
                        @foreach($status as $stat)
-                          <option value="{{ $stat->id }}">{{ $stat->name }}</option>
+                          <option value="{{ $stat->slug }}">{{ $stat->name }}</option>
                         @endforeach
                       </select>
                       @include('alerts.feedback', ['field' => 'status'])

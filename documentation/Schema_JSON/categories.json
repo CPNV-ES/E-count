@@ -1,12 +1,12 @@
-{"_id":{"$oid":"5e2190a72fe1ad26543dab66"},"name":"Nourriture"}
-{"_id":{"$oid":"5e2190b92fe1ad26543dab67"},"name":"Voiture"}
-{"_id":{"$oid":"5e2190c42fe1ad26543dab68"},"name":"Gastronomie"}
-{"_id":{"$oid":"5e2190d02fe1ad26543dab69"},"name":"Santé et beauté"}
-{"_id":{"$oid":"5e2190da2fe1ad26543dab6a"},"name":"Shopping"}
-{"_id":{"$oid":"5e2190ed2fe1ad26543dab6b"},"name":"Voyage"}
-{"_id":{"$oid":"5e2190f72fe1ad26543dab6c"},"name":"Ménage"}
-{"_id":{"$oid":"5e2191062fe1ad26543dab6d"},"name":"Loisirs"}
-{"_id":{"$oid":"5e2191172fe1ad26543dab6e"},"name":"Transport"}
-{"_id":{"$oid":"5e2191222fe1ad26543dab6f"},"name":"Services"}
-{"_id":{"$oid":"5e2191292fe1ad26543dab70"},"name":"Divers"}
-{"_id":{"$oid":"5e21913d2fe1ad26543dab71"},"name":"Espèces"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d8d"},"name":"Nourriture","slug":"nourriture"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d8e"},"name":"Voiture","slug":"voiture"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d8f"},"name":"Gastronomie","slug":"gastronomie"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d90"},"name":"Santé et beauté","slug":"sante_et_beaute"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d91"},"name":"Shopping","slug":"shopping"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d92"},"name":"Voyage","slug":"voyage"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d93"},"name":"Ménage","slug":"menage"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d94"},"name":"Loisirs","slug":"loisirs"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d95"},"name":"Transport","slug":"transport"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d96"},"name":"Services","slug":"services"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d97"},"name":"Divers","slug":"divers"}
+{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d98"},"name":"Espèces","slug":"especes"}

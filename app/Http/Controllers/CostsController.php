@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cost;
-use App\Categories;
+use App\Category;
 use App\Status;
 use App\WaysOfPayment;
 
 class CostsController extends Controller
 {
     public function create(){
-        $categories = Categories::all();
+        $categories = Category::all();
         $status = Status::all();
         $waysOfPayment = WaysOfPayment::all();
         return view('costs.create')->with(compact('categories', 'status', 'waysOfPayment'));

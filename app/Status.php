@@ -8,7 +8,7 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 class Status extends Eloquent
 {
     protected $connection = 'mongodb';
-    protected $collection = 'status';
+    protected $collection = 'statuses';
     
     protected $fillable = [
         'name'
