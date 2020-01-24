@@ -20,7 +20,7 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="/home">
-            <i class="now-ui-icons media-2_sound-wave"></i>
+            <i class="now-ui-icons business_chart-bar-32"></i>
             <p>
               <span class="d-lg-none d-md-block">{{ __("Tableau de bord") }}</span>
             </p>

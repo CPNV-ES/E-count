@@ -14,7 +14,7 @@
     <ul class="nav">
       <li class="@if ($activePage == 'home') active @endif">
         <a href="{{ route('home') }}">
-          <i class="now-ui-icons design_app"></i>
+          <i class="now-ui-icons business_chart-bar-32"></i>
           <p>{{ __('Tableau de bord') }}</p>
         </a>
       </li>
@@ -24,10 +24,10 @@
             <p>{{ __("Mon Profil") }}</p>
         </a>
       </li>
-      <li class = " @if ($activePage == 'table') active @endif">
-        <a href="{{ route('page.index','table') }}">
-          <i class="now-ui-icons design_bullet-list-67"></i>
-          <p>{{ __('Table List') }}</p>
+      <li class = " @if ($activePage == 'create') active @endif">
+        <a href="{{ route('costs.create') }}">
+          <i class="now-ui-icons ui-1_simple-add"></i>
+          <p>{{ __('Créer une dépense') }}</p>
         </a>
       </li>
     </ul>

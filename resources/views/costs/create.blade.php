@@ -1,7 +1,7 @@
 @extends('layouts.app', [
     'class' => 'sidebar-mini ',
-    'namePage' => 'User Profile',
-    'activePage' => 'profile',
+    'namePage' => 'Créer une dépense',
+    'activePage' => 'create',
     'activeNav' => '',
 ])
 
@@ -85,7 +85,7 @@
                         @foreach($waysOfPayment as $payment)
                           <option value="{{ $payment->id }}">{{ $payment->name }}</option>
                         @endforeach
-                      </select>                      
+                      </select>
                       @include('alerts.feedback', ['field' => 'waysOfPayment'])
                     </div>
                   </div>
