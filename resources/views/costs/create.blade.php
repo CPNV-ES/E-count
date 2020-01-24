@@ -15,6 +15,11 @@
           <div class="card-header">
             <h5 class="title">{{__(" Insérer une dépense")}}</h5>
           </div>
+          @if (session('create'))
+              <div class="alert alert-success">
+                  {{ session('create') }}
+              </div>
+          @endif
           <div class="card-body">
             <form method="post" action="{{ route('costs.insert') }}" autocomplete="off"
             enctype="multipart/form-data">
@@ -49,9 +54,11 @@
                 <div class="row">
                   <div class="col-md-11 pr-1">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">{{__(" Catégorie")}}</label>
+                      <label for="exampleInputEmail1">{{__("Catégories")}}</label>
                       <select name="categories" class="form-control">
-                        <option value="{{ old('name', auth()->user()->name) }}">{{ old('name', auth()->user()->name) }}</option>
+                        @foreach($categories as $cat)
+                          <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                        @endforeach
                       </select>
                       @include('alerts.feedback', ['field' => 'categories'])
                     </div>
@@ -75,8 +82,10 @@
                     <div class="form-group">
                       <label for="exampleInputEmail1">{{__(" Moyen de payement")}}</label>
                       <select name="waysOfPayment" class="form-control">
-                        <option value="{{ old('name', auth()->user()->name) }}">{{ old('email', auth()->user()->email) }}</option>
-                      </select>
+                        @foreach($waysOfPayment as $payment)
+                          <option value="{{ $payment->id }}">{{ $payment->name }}</option>
+                        @endforeach
+                      </select>                      
                       @include('alerts.feedback', ['field' => 'waysOfPayment'])
                     </div>
                   </div>
@@ -88,8 +97,9 @@
                     <div class="form-group">
                       <label for="exampleInputEmail1">{{__(" Statut")}}</label>
                       <select name="status" class="form-control">
-                        <option value="Apayer">A payer</option>
-                        <option value="payer">Payer</option>
+                       @foreach($status as $stat)
+                          <option value="{{ $stat->id }}">{{ $stat->name }}</option>
+                        @endforeach
                       </select>
                       @include('alerts.feedback', ['field' => 'status'])
                     </div>

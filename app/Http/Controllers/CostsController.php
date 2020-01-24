@@ -4,11 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cost;
+use App\Categories;
+use App\Status;
+use App\WaysOfPayment;
 
 class CostsController extends Controller
 {
     public function create(){
-        return view('costs.create');
+        $categories = Categories::all();
+        $status = Status::all();
+        $waysOfPayment = WaysOfPayment::all();
+        return view('costs.create')->with(compact('categories', 'status', 'waysOfPayment'));
     }
 
     public function store(Request $request){
@@ -21,7 +27,7 @@ class CostsController extends Controller
         $cost->status =         $request->get('status');
         $cost->users =          $request->get('users');
         $cost->save();
-        return view('costs.create');
+        return redirect(route('costs.create'))->with('create', 'Dépense créée !');
     }
 }
     

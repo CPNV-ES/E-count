@@ -28,7 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::post('addcosts',['as' => 'costs.insert','uses' => 'CostsController@store']);
-	Route::get('addcosts',['as' => 'addcosts.create','uses' => 'CostsController@create']);
+	Route::get('addcosts',['as' => 'costs.create','uses' => 'CostsController@create']);
 
 	Route::resource('user', 'UserController', ['except' => ['show']]);
 
