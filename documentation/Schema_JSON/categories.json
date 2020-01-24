@@ -1,0 +1,14 @@
+[
+	{"name":"Nourriture", "slug":"nourriture"},
+	{"name":"Voiture","slug":"voiture"},
+	{"name":"Gastronomie","slug":"gastronomie"},
+	{"name":"Santé et beauté","slug":"sante_et_beaute"},
+	{"name":"Shopping","slug":"shopping"},
+	{"name":"Voyage","slug":"voyage"},
+	{"name":"Ménage","slug":"menage"},
+	{"name":"Loisirs","slug":"loisirs"},
+	{"name":"Transport","slug":"transport"},
+	{"name":"Services","slug":"services"},
+	{"name":"Divers","slug":"divers"},
+	{"name":"Espèces","slug":"especes"}
+]
