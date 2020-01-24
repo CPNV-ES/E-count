@@ -1,4 +1,4 @@
 [
-	{"name":"Payé"},
-	{"name":"À payé"}
+	{"name":"Payé","slug":"paye"},
+	{"name":"À payer","slug":"a_paye"}
 ]

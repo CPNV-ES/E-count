@@ -14,23 +14,4 @@ class Cost extends Eloquent
         'date', 'description','categories', 'price', 'waysOfPayment', 'status', 'users'
     ];
 
-    public function users()
-    {
-        return $this->hasOne('App\User', 'users', 'id');
-    }
-
-    public function status()
-    {
-        return $this->hasMany('App\Status');
-    }
-
-    public function waysOfPayment()
-    {
-        return $this->hasMany('App\WaysOfPayment');
-    }
-
-    public function categories()
-    {
-        return $this->hasMany('App\Categories');
-    }
 }

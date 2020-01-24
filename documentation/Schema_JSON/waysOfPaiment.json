@@ -1,8 +1,8 @@
 [
-	{"name":"Espèce"},
-	{"name":"Cartes"},
-	{"name":"Twint"},
-	{"name":"Facture"},
-	{"name":"Autres"}
+	{"name":"Espèce", "slug":"espece"},
+	{"name":"Cartes", "slug":"cartes"},
+	{"name":"Twint", "slug":"twint"},
+	{"name":"Facture", "slug":"facture"},
+	{"name":"Autres", "slug":"autres"}
 
 ]

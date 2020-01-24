@@ -8,14 +8,11 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 class WaysOfPayment extends Eloquent
 {
     protected $connection = 'mongodb';
-    protected $collection = 'waysOfPayment';
+    protected $collection = 'waysOfPayments';
     
     protected $fillable = [
         'name'
     ];
 
-    public function cost()
-    {
-        return $this->belongsToMany('App\Cost');
-    }
+
 }

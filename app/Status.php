@@ -8,14 +8,10 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 class Status extends Eloquent
 {
     protected $connection = 'mongodb';
-    protected $collection = 'status';
+    protected $collection = 'statuses';
     
     protected $fillable = [
         'name'
     ];
 
-    public function cost()
-    {
-        return $this->belongsToMany('App\Cost');
-    }
 }
