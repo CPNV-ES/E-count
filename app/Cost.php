@@ -13,5 +13,4 @@ class Cost extends Eloquent
     protected $fillable = [
         'date', 'description','categories', 'price', 'waysOfPayment', 'status', 'users'
     ];
-
 }

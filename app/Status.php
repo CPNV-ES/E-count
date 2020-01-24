@@ -13,5 +13,4 @@ class Status extends Eloquent
     protected $fillable = [
         'name'
     ];
-
 }

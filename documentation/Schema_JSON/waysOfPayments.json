@@ -1,0 +1,7 @@
+[
+{"_id":{"$oid":"5e2aee76fe2c4f0a74dd2da3"},"name":"Espèce","slug":"espece"},
+{"_id":{"$oid":"5e2aee76fe2c4f0a74dd2da4"},"name":"Cartes","slug":"cartes"},
+{"_id":{"$oid":"5e2aee76fe2c4f0a74dd2da5"},"name":"Twint","slug":"twint"},
+{"_id":{"$oid":"5e2aee76fe2c4f0a74dd2da6"},"name":"Facture","slug":"facture"},
+{"_id":{"$oid":"5e2aee76fe2c4f0a74dd2da7"},"name":"Autres","slug":"autres"}
+]

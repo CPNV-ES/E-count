@@ -1,14 +1,14 @@
 [
-	{"name":"Nourriture", "slug":"nourriture"},
-	{"name":"Voiture","slug":"voiture"},
-	{"name":"Gastronomie","slug":"gastronomie"},
-	{"name":"Santé et beauté","slug":"sante_et_beaute"},
-	{"name":"Shopping","slug":"shopping"},
-	{"name":"Voyage","slug":"voyage"},
-	{"name":"Ménage","slug":"menage"},
-	{"name":"Loisirs","slug":"loisirs"},
-	{"name":"Transport","slug":"transport"},
-	{"name":"Services","slug":"services"},
-	{"name":"Divers","slug":"divers"},
-	{"name":"Espèces","slug":"especes"}
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d8d"},"name":"Nourriture","slug":"nourriture"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d8e"},"name":"Voiture","slug":"voiture"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d8f"},"name":"Gastronomie","slug":"gastronomie"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d90"},"name":"Santé et beauté","slug":"sante_et_beaute"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d91"},"name":"Shopping","slug":"shopping"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d92"},"name":"Voyage","slug":"voyage"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d93"},"name":"Ménage","slug":"menage"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d94"},"name":"Loisirs","slug":"loisirs"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d95"},"name":"Transport","slug":"transport"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d96"},"name":"Services","slug":"services"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d97"},"name":"Divers","slug":"divers"},
+	{"_id":{"$oid":"5e2aed27fe2c4f0a74dd2d98"},"name":"Espèces","slug":"especes"}
 ]

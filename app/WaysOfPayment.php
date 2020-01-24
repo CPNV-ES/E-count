@@ -13,6 +13,4 @@ class WaysOfPayment extends Eloquent
     protected $fillable = [
         'name'
     ];
-
-
 }
