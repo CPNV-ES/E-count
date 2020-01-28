@@ -13,7 +13,7 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Liste des dépenses</h4>
+          <h4 class="card-title">Liste des dépenses payé</h4>
         </div>
         @if (session('paye'))
         <div class="alert alert-primary">
@@ -38,33 +38,60 @@
               </thead>
               <tbody>
                 @foreach($costsArray ?? '' as $cost)
+                @if($cost['status'] == 'Payé')
                     <tr>
                       <td>{{$cost['date'] ?? '' }}</td>
                       <td>{{$cost['category'] ?? ''}}</td>
-                      <td>{{$cost['price'] ?? ''}}</td>
+                      <td>{{$cost['price'] ?? ''}}.-</td>
                       <td>{{$cost['waysOfPayment'] ?? ''}}</td>
                       <td>
-                        {{$cost['status'] ?? ''}} 
-                        @if($cost['status'] == 'À payer')
-                      <a href="/updatepay/{{ $cost['id']}}">
-                        <button type="button" class="btn btn-outline-success btn-sm">
-                          <i class="now-ui-icons ui-1_check"></i>
-                        </button>
-                      </a>
-                        @endif
-                        @if($cost['status'] == 'Payé')
+                        {{$cost['status'] ?? ''}}
                         <a href="/updatetopay/{{ $cost['id']}}">
-                          <button type="button" class="btn btn-outline-danger btn-sm">
-                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                          <button type="button" class="btn btn-outline-success btn-sm">
+                            <i class="now-ui-icons ui-1_check"></i>
                           </button>
                         </a>
-                        @endif
                       </td>
                      
                       <td>Edit</td>
                     </tr>
+                    @endif
                     @endforeach
               </tbody>
+            </table>
+            <h4 class="card-title">Liste des dépenses à payer</h4>
+            <table class="table">
+              <thead class=" text-primary">
+                <th>Date</th>
+                <th>Categories</th>
+                <th>Montant</th>
+                <th>Moyen de paiement</th>
+                <th>Status</th>
+                <th>Options</th>
+              </thead>
+              <tbody>
+                @foreach($costsArray ?? '' as $cost)
+                @if($cost['status'] == 'À payer')
+                    <tr>
+                      <td>{{$cost['date'] ?? '' }}</td>
+                      <td>{{$cost['category'] ?? ''}}</td>
+                      <td>{{$cost['price'] ?? ''}}.-</td>
+                      <td>{{$cost['waysOfPayment'] ?? ''}}</td>
+                      <td>
+                        {{$cost['status'] ?? ''}} 
+                      <a href="/updatepay/{{ $cost['id']}}">
+                        <button type="button" class="btn btn-outline-danger btn-sm">                          
+                          <i class="now-ui-icons ui-1_simple-remove"></i>
+                        </button>
+                      </a>
+                      </td>
+                     
+                      <td>Edit</td>
+                    </tr>
+                    @endif
+                    @endforeach
+              </tbody>
+
             </table>
           </div>
         </div>
