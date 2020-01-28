@@ -20,6 +20,17 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
+
+	Route::resource('user', 'UserController', ['except' => ['show']]);
+	
+	Route::get('updatepay/{id}', 'CostsController@updatepay');
+	Route::get('updatetopay/{id}', 'CostsController@updatetopay');
+	
+
+	Route::put('costs', ['as' => 'costs.update', 'uses' => 'CostsController@update']);
+	Route::get('costs', ['as' => 'costs.show', 'uses' => 'CostsController@show']);
+	Route::post('costs', ['as' => 'costs.insert','uses' => 'CostsController@insert']); 
+	
 	Route::post('addcosts',['as' => 'costs.insert','uses' => 'CostsController@store']);
 	Route::get('addcosts',['as' => 'costs.create','uses' => 'CostsController@create']);
 

@@ -18,6 +18,12 @@
           <p>{{ __('Tableau de bord') }}</p>
         </a>
       </li>
+      <li class="@if ($activePage == 'costs') active @endif">
+        <a href="{{ route('costs.show') }}">
+          <i class="now-ui-icons business_money-coins"></i>
+          <p> {{ __("Gérer les dépenses") }} </p>
+        </a>
+      </li>
       <li class="@if ($activePage == 'profile') active @endif">
         <a href="{{ route('profile.edit') }}">
             <i class="now-ui-icons users_single-02"></i>
