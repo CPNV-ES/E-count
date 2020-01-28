@@ -1,80 +1,68 @@
 @extends('layouts.app', [
-    'namePage' => 'Dashboard',
-    'class' => 'login-page sidebar-mini ',
-    'activePage' => 'home',
-    'backgroundImage' => asset('now') . "/img/bg14.jpg",
+'class' => 'sidebar-mini ',
+'namePage' => 'Statistics',
+'activePage' => 'home',
+'activeNav' => '',
 ])
 
 @section('content')
-  <div class="panel-header panel-header-lg">
-    <canvas id="bigDashboardChart"></canvas>
-  </div>
-  <div class="content">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="card card-chart">
-          <div class="card-header">
-            <h5 class="card-category">Global Sales</h5>
-            <h4 class="card-title">Shipped Products</h4>
-          </div>
-          <div class="card-body">
-            <div class="chart-area">
-              <canvas id="lineChartExample"></canvas>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="stats">
-              <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
-            </div>
-          </div>
+<div class="panel-header">
+</div>
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Montant des dépenses payé pour l'année 2020</h4>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card card-chart">
-          <div class="card-header">
-            <h5 class="card-category">2018 Sales</h5>
-            <h4 class="card-title">All products</h4>
-          </div>
-          <div class="card-body">
-            <div class="chart-area">
-              <canvas id="lineChartExampleWithNumbersAndGrid"></canvas>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="stats">
-              <i class="now-ui-icons arrows-1_refresh-69"></i> Just Updated
-            </div>
-          </div>
+        @if (session('paye'))
+        <div class="alert alert-primary">
+          {{session('paye')}}
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card card-chart">
-          <div class="card-header">
-            <h5 class="card-category">Email Statistics</h5>
-            <h4 class="card-title">24 Hours Performance</h4>
-          </div>
-          <div class="card-body">
-            <div class="chart-area">
-              <canvas id="barChartSimpleGradientsNumbers"></canvas>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="stats">
-              <i class="now-ui-icons ui-2_time-alarm"></i> Last 7 days
-            </div>
+        @endif
+        @if (session('a_payer'))
+        <div class="alert alert-primary">
+          {{session('a_payer')}}
+        </div>
+        @endif
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+            <tbody>
+              <thead class=" text-primary" align="center">
+                <th>Janvier</th>
+                <th>Février</th>
+                <th>Mars</th>
+                <th>Avril</th>
+                <th>Mai</th>
+                <th>Juin</th>
+                <th>Juillet</th>
+                <th>Août</th>
+                <th>Septembre</th>
+                <th>Octobre</th>
+                <th>Novembre</th>
+                <th>Décembre</th>
+              </thead>
+            </tbody>
+              <tr align="center">
+                <td>{{$countJan}}.-</td>
+                <td>{{$countFev}}.-</td>
+                <td>{{$countMar}}.-</td>
+                <td>{{$countAvr}}.-</td>
+                <td>{{$countMai}}.-</td>
+                <td>{{$countJui}}.-</td>
+                <td>{{$countJuil}}.-</td>
+                <td>{{$countAou}}.-</td>
+                <td>{{$countSep}}.-</td>
+                <td>{{$countOct}}.-</td>
+                <td>{{$countNov}}.-</td>
+                <td>{{$countDec}}.-</td>
+              <tr>
+            </table>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 @endsection
-
-@push('js')
-  <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      demo.initDashboardPageCharts(); 
-    });
-  </script>
-@endpush
-
