@@ -1,0 +1,8 @@
+[
+	{"name":"Espèce", "slug":"espece"},
+	{"name":"Cartes", "slug":"cartes"},
+	{"name":"Twint", "slug":"twint"},
+	{"name":"Facture", "slug":"facture"},
+	{"name":"Autres", "slug":"autres"}
+
+]

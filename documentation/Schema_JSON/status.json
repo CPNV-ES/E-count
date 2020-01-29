@@ -1,2 +1,4 @@
-{"_id":{"$oid":"5e2191b62fe1ad26543dab72"},"name":"Payé"}
-{"_id":{"$oid":"5e2191c32fe1ad26543dab73"},"name":"A payé"}
+[
+	{"name":"Payé","slug":"paye"},
+	{"name":"À payer","slug":"a_paye"}
+]
