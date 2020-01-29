@@ -30,17 +30,18 @@
             <table class="table">
               <thead class=" text-primary">
                 <th>Date</th>
+                <th>Description</th>
                 <th>Categories</th>
                 <th>Montant</th>
                 <th>Moyen de paiement</th>
                 <th>Status</th>
-                <th>Options</th>
               </thead>
               <tbody>
                 @foreach($costsArray ?? '' as $cost)
                 @if($cost['status'] == 'Payé')
                     <tr>
                       <td>{{$cost['date'] ?? '' }}</td>
+                      <td>{{$cost['description'] ?? ''}}</td>
                       <td>{{$cost['category'] ?? ''}}</td>
                       <td>{{$cost['price'] ?? ''}}.-</td>
                       <td>{{$cost['waysOfPayment'] ?? ''}}</td>
@@ -52,8 +53,6 @@
                           </button>
                         </a>
                       </td>
-                     
-                      <td>Edit</td>
                     </tr>
                     @endif
                     @endforeach
@@ -62,18 +61,19 @@
             <h4 class="card-title">Liste des dépenses à payer</h4>
             <table class="table">
               <thead class=" text-primary">
-                <th>Date</th>
+              <th>Date</th>
+                <th>Description</th>
                 <th>Categories</th>
                 <th>Montant</th>
                 <th>Moyen de paiement</th>
                 <th>Status</th>
-                <th>Options</th>
               </thead>
               <tbody>
                 @foreach($costsArray ?? '' as $cost)
                 @if($cost['status'] == 'À payer')
                     <tr>
-                      <td>{{$cost['date'] ?? '' }}</td>
+                    <td>{{$cost['date'] ?? '' }}</td>
+                      <td>{{$cost['description'] ?? ''}}</td>
                       <td>{{$cost['category'] ?? ''}}</td>
                       <td>{{$cost['price'] ?? ''}}.-</td>
                       <td>{{$cost['waysOfPayment'] ?? ''}}</td>
@@ -85,8 +85,6 @@
                         </button>
                       </a>
                       </td>
-                     
-                      <td>Edit</td>
                     </tr>
                     @endif
                     @endforeach
