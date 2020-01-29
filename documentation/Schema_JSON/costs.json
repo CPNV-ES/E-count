@@ -1,4 +1,0 @@
-[
-    {"_id":{"$oid":"5e2aee8f353d0000ea002c93"},"date":"2020-01-24","description":"je suis la description","categories":"menage","price":"150","waysOfPayment":"cartes","status":"paye","users":"5e2ab18aae2200007e006052","updated_at":{"$date":{"$numberLong":"1579871887000"}},"created_at":{"$date":{"$numberLong":"1579871887000"}}},
-    {"_id":{"$oid":"5e2aef25353d0000ea002c94"},"date":"2020-01-24","description":"test 2","categories":"sante_et_beaute","price":"1780","waysOfPayment":"espece","status":"a_payer","users":"5e2ab18aae2200007e006052","updated_at":{"$date":{"$numberLong":"1579872037000"}},"created_at":{"$date":{"$numberLong":"1579872037000"}}}
-]
