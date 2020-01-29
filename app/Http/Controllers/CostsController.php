@@ -11,13 +11,13 @@ use App\WaysOfPayment;
 
 class CostsController extends Controller
 {
-    
+
     public function show()
     {
         $id = auth()->user()->_id;
         $costsArray = [];
         $costs=Cost::where('users', $id)->get();
-       
+
         foreach(json_decode($costs) as $cost) {
             $costsArray[] = Array(
                 "id" => $cost->_id,
@@ -27,12 +27,12 @@ class CostsController extends Controller
                 "status" => Status::where('slug', $cost->status)->value('name'),
                 "waysOfPayment" => WaysOfPayment::where('slug', $cost->waysOfPayment)->value('name'),
                 "category" => Category::where('slug', $cost->category)->value('name')
-            );     
-        }  
-    
+            );
+        }
+
         return view('costs.show',compact('costsArray'));
     }
-    
+
     public function updatepay($id)
     {
         $costs=Cost::find($id);
@@ -47,6 +47,13 @@ class CostsController extends Controller
         $costs->status = 'a_payer';
         $costs->save();
         return redirect(route('costs.show'))->with('a_payer', 'Vous avez changé le statut à "À payer"');
+    }
+
+    public function deletepay($id){
+        $costtodelete=Cost::find($id);
+
+        $costtodelete->delete();
+        return redirect(route('costs.show'))->with('delete', 'Le coût a été supprimé');
     }
 
     public function create(){
@@ -68,5 +75,6 @@ class CostsController extends Controller
         $cost->save();
         return redirect(route('costs.create'))->with('create', 'Dépense créée !');
     }
+
 }
-    
+

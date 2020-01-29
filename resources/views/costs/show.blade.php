@@ -25,6 +25,11 @@
           {{session('a_payer')}}
         </div>
         @endif
+        @if (session('delete'))
+        <div class="alert alert-primary">
+          {{session('delete')}}
+        </div>
+        @endif
         <div class="card-body">
           <div class="table-responsive">
             <table class="table">
@@ -35,6 +40,7 @@
                 <th>Montant</th>
                 <th>Moyen de paiement</th>
                 <th>Status</th>
+                <th>Options</th>
               </thead>
               <tbody>
                 @foreach($costsArray ?? '' as $cost)
@@ -53,6 +59,17 @@
                           </button>
                         </a>
                       </td>
+                      <td>
+                          <form method="post" action="/deletecost/{{ $cost['id'] }}">
+                              @csrf
+                              <button type="button" rel="tooltip"
+                                      class="btn btn-danger btn-icon btn-sm delete-button text-center"
+                                      data-original-title="" title=""
+                                      onclick="confirm('{{ __('Voulez-vous vraiment supprimer cette dépense ?') }}') ? this.parentElement.submit() : ''">
+                                  <i class="now-ui-icons ui-1_simple-remove"></i>
+                              </button>
+                          </form>
+                      </td>
                     </tr>
                     @endif
                     @endforeach
@@ -61,12 +78,13 @@
             <h4 class="card-title">Liste des dépenses à payer</h4>
             <table class="table">
               <thead class=" text-primary">
-              <th>Date</th>
+                <th>Date</th>
                 <th>Description</th>
                 <th>Categories</th>
                 <th>Montant</th>
                 <th>Moyen de paiement</th>
                 <th>Status</th>
+                <th>Options</th>
               </thead>
               <tbody>
                 @foreach($costsArray ?? '' as $cost)
@@ -78,12 +96,23 @@
                       <td>{{$cost['price'] ?? ''}}.-</td>
                       <td>{{$cost['waysOfPayment'] ?? ''}}</td>
                       <td>
-                        {{$cost['status'] ?? ''}} 
+                        {{$cost['status'] ?? ''}}
                       <a href="/updatepay/{{ $cost['id']}}">
-                        <button type="button" class="btn btn-outline-danger btn-sm">                          
+                        <button type="button" class="btn btn-outline-danger btn-sm">
                           <i class="now-ui-icons ui-1_simple-remove"></i>
                         </button>
                       </a>
+                      </td>
+                      <td>
+                          <form method="post" action="/deletecost/{{ $cost['id'] }}">
+                              @csrf
+                          <button type="button" rel="tooltip"
+                                  class="btn btn-danger btn-icon btn-sm delete-button text-center"
+                                  data-original-title="" title=""
+                                  onclick="confirm('{{ __('Voulez-vous vraiment supprimer cette dépense ?') }}') ? this.parentElement.submit() : ''">
+                              <i class="now-ui-icons ui-1_simple-remove"></i>
+                          </button>
+                          </form>
                       </td>
                     </tr>
                     @endif
