@@ -1,0 +1,6 @@
+[
+    {"_id":{"$oid":"5e2aeca6fe2c4f0a74dd2d8b"},"name":"Payé","slug":"paye"},
+    {"_id":{"$oid":"5e2aeca6fe2c4f0a74dd2d8c"},"name":"À payer","slug":"a_payer"},
+	{"_id":{"$oid":"5e2aeca6fe2c4f0a74dd2d8b"},"name":"Payé","slug":"paye"},
+	{"_id":{"$oid":"5e2aeca6fe2c4f0a74dd2d8c"},"name":"À payer","slug":"a_payer"}
+]
