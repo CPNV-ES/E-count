@@ -32,6 +32,100 @@ class HomeController extends Controller
 
       
         $id = auth()->user()->_id;
+<<<<<<< HEAD
+=======
+
+        //janvier
+        $costsJan=Cost::where('users', $id)
+                        ->where('status', 'paye')
+                        ->where('date', '>=', '2020-01-01')
+                        ->where('date', '<=', '2020-01-31')
+                        ->get();       
+        foreach(json_decode($costsJan) as $cost) {
+            $countJan += $cost->price;                
+        }
+        //février
+        $costsFev=Cost::where('users', $id)
+                        ->where('status', 'paye')
+                        ->where('date', '>=', '2020-02-01')
+                        ->where('date', '<=', '2020-02-29')
+                        ->get();       
+        foreach(json_decode($costsFev) as $cost) {
+            $countFev += $cost->price;                
+        }
+        //mars
+        $costsMar=Cost::where('users', $id)
+                        ->where('status', 'paye')
+                        ->where('date', '>=', '2020-03-01')
+                        ->where('date', '<=', '2020-03-31')
+                        ->get();       
+        foreach(json_decode($costsMar) as $cost) {
+            $countMar += $cost->price;                
+        }
+        //avris
+        $costsAvr=Cost::where('users', $id)
+                        ->where('status', 'paye')
+                        ->where('date', '>=', '2020-04-01')
+                        ->where('date', '<=', '2020-04-30')
+                        ->get();       
+        foreach(json_decode($costsAvr) as $cost) {
+            $countAvr += $cost->price;                
+        }
+        //mai
+        $costsMai=Cost::where('users', $id)
+                        ->where('status', 'paye')
+                        ->where('date', '>=', '2020-05-01')
+                        ->where('date', '<=', '2020-05-31')
+                        ->get();       
+        foreach(json_decode($costsMai) as $cost) {
+            $countMai += $cost->price;                
+        }
+        //juin
+        $costsJui=Cost::where('users', $id)
+                        ->where('status', 'paye')
+                        ->where('date', '>=', '2020-06-01')
+                        ->where('date', '<=', '2020-06-31')
+                        ->get();       
+        foreach(json_decode($costsJui) as $cost) {
+            $countJui += $cost->price;                
+        }
+        //juillet
+        $costsJuil=Cost::where('users', $id)
+                        ->where('status', 'paye')
+                        ->where('date', '>=', '2020-07-01')
+                        ->where('date', '<=', '2020-07-31')
+                        ->get();       
+        foreach(json_decode($costsJuil) as $cost) {
+            $countJuil += $cost->price;                
+        }
+        //aout
+        $costsMar=Cost::where('users', $id)
+                        ->where('status', 'paye')
+                        ->where('date', '>=', '2020-08-01')
+                        ->where('date', '<=', '2020-08-31')
+                        ->get();       
+        foreach(json_decode($costsMar) as $cost) {
+            $countAou += $cost->price;                
+        }
+        //septembre
+        $costsSep=Cost::where('users', $id)
+                        ->where('status', 'paye')
+                        ->where('date', '>=', '2020-09-01')
+                        ->where('date', '<=', '2020-09-31')
+                        ->get();       
+        foreach(json_decode($costsSep) as $cost) {
+            $countSep += $cost->price;                
+        }
+        //octobre
+        $costsOct=Cost::where('users', $id)
+                        ->where('status', 'paye')
+                        ->where('date', '>=', '2020-10-01')
+                        ->where('date', '<=', '2020-10-31')
+                        ->get();       
+        foreach(json_decode($costsOct) as $cost) {
+            $countOct += $cost->price;                
+        }
+>>>>>>> Stats_Mongodb_JS
         
 
         $costs=Cost::where('users', $id)->where('status', 'paye')->get();   
@@ -62,6 +156,12 @@ class HomeController extends Controller
             } 
         }
 
+<<<<<<< HEAD
         return view('home',compact('arrayCosts'));
+=======
+        $max= max($countJan, $countFev, $countMar, $countAvr, $countMai, $countJui, $countJuil, $countAou, $countSep, $countOct, $countNov, $countDec);
+
+        return view('home',compact('max','countJan', 'countFev', 'countMar', 'countAvr', 'countMai', 'countJui', 'countJuil', 'countAou', 'countSep', 'countOct', 'countNov', 'countDec'));
+>>>>>>> Stats_Mongodb_JS
     }
 }

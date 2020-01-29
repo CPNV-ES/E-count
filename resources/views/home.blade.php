@@ -5,6 +5,20 @@
 'activeNav' => '',
 ])
 
+<style>
+.vertical {
+  display: inline-block;
+  -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+}
+.vertical {
+  box-shadow: inset 0px 4px 6px #ccc;
+}
+.progress-bar {
+  box-shadow: inset 0px 4px 6px rgba(100,100,100,0.6);
+}
+</style>
+
 @section('content')
 <div class="panel-header">
 </div>
@@ -35,11 +49,19 @@
                   <th>{{$mois}}</th>
                 @endforeach
               </thead>
+
             </tbody>
               <tr align="center">
                 @foreach($arrayCosts[$annee] as $cost)
                   <td class="col-1">
+                    <div class="container mb-4 mt-4">
+                      <div class="progress vertical">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width: {{100*$countJan/$max}}%;"></div>  
+                      </div>
+                    </div>
+                    <div>
                     {{ array_sum($cost).'.-' }}
+                    </div>
                   </td>
                 @endforeach
               <tr>
