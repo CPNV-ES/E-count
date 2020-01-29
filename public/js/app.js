@@ -19655,8 +19655,13 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\Gael.OBERSON\Documents\GitHub\E-count\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\Gael.OBERSON\Documents\GitHub\E-count\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\Users\GOB\Documents\GitProjet\E-count\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\GOB\Documents\GitProjet\E-count\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> develop
 
 
 /***/ })

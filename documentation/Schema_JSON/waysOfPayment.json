@@ -1,5 +1,0 @@
-{"_id":{"$oid":"5e218f762fe1ad26543dab61"},"name":"Cartes"}
-{"_id":{"$oid":"5e218f992fe1ad26543dab62"},"name":"Espèce"}
-{"_id":{"$oid":"5e218fa72fe1ad26543dab63"},"name":"Twint"}
-{"_id":{"$oid":"5e218fb62fe1ad26543dab64"},"name":"Autres"}
-{"_id":{"$oid":"5e218fe62fe1ad26543dab65"},"name":"Facture"}
