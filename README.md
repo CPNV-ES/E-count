@@ -5,6 +5,7 @@
 | Pasteur Kévin | Ajout Installation Composer + NPM | 23.01.2020 |
 | Oberson Gaël  | fix document            | 28.01.2020 |
 | Oberson Gaël  | Ajouter partie Database | 29.01.2020 |
+| Pasteur Kévin  | Refactor du document| 29.01.2020 |
 
 # Création du projet Laravel
 
@@ -16,7 +17,7 @@
    composer global require laravel/installer
    ```
 
-3. Créé le projet NOM_PROJET
+3. Créer le projet NOM_PROJET
    ```
    laravel new NOM_PROJET
    ```
@@ -26,9 +27,8 @@
 ## Prérequis
 
 - PHP 7.3
-
-## Installation de Composer
-## Installation de NPM
+- Composer
+- NPM
 
 ## Installation de MongoDB
 
@@ -49,13 +49,13 @@
    git clone https://github.com/KevinPasteur/E-count.git
    ```
 
-2. Inicialisé le git flow
+2. Initialiser le git flow
    
    ```
     git flow init
    ```
 
-3. modifier le `.env` pour y ajouter à la fin ceci:
+3. Modifier le `.env` pour y ajouter à la fin ceci:
 
    ```
     DB_CONNECTION=mongodb
@@ -76,9 +76,9 @@
 
 # Database insert data
 
-1. Dans MogoDB Compass, créé une nouvelle **Database**
+1. Dans MongoDB Compass, créer une nouvelle **Database**
    
-2. Créé les collections suivante :
+2. Créer les collections suivante :
    
     ```
     categories
@@ -88,7 +88,7 @@
 
 3. Ajouter les données suivante :
    
-   Tout les fichier json de création de data se touve dans le répertoire **/documentation/Schema_JSON/**
+   Tous les fichiers json de création de data se trouvent dans le répertoire **/documentation/Schema_JSON/**
 
     Collection **categories**
     ```json
