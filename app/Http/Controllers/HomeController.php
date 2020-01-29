@@ -41,7 +41,6 @@ class HomeController extends Controller
         $countNov=0;
         $countDec=0;
         $id = auth()->user()->_id;
-        $costsArray[] = Array(); 
 
         //janvier
         $costsJan=Cost::where('users', $id)
@@ -153,6 +152,8 @@ class HomeController extends Controller
             $countDec += $cost->price;                
         }
 
-        return view('home',compact('costsArray', 'countJan', 'countFev', 'countMar', 'countAvr', 'countMai', 'countJui', 'countJuil', 'countAou', 'countSep', 'countOct', 'countNov', 'countDec'));
+        $max= max($countJan, $countFev, $countMar, $countAvr, $countMai, $countJui, $countJuil, $countAou, $countSep, $countOct, $countNov, $countDec);
+
+        return view('home',compact('max','countJan', 'countFev', 'countMar', 'countAvr', 'countMai', 'countJui', 'countJuil', 'countAou', 'countSep', 'countOct', 'countNov', 'countDec'));
     }
 }
