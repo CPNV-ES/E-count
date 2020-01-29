@@ -10,10 +10,11 @@
 </div>
 <div class="content">
   <div class="row">
+    @foreach(array_keys($arrayCosts) as $annee )
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Montant des dépenses payé pour l'année 2020</h4>
+          <h4 class="card-title">Montant des dépenses payé pour l'année {{ $annee}}</h4>
         </div>
         @if (session('paye'))
         <div class="alert alert-primary">
@@ -30,39 +31,25 @@
             <table class="table">
             <tbody>
               <thead class=" text-primary" align="center">
-                <th>Janvier</th>
-                <th>Février</th>
-                <th>Mars</th>
-                <th>Avril</th>
-                <th>Mai</th>
-                <th>Juin</th>
-                <th>Juillet</th>
-                <th>Août</th>
-                <th>Septembre</th>
-                <th>Octobre</th>
-                <th>Novembre</th>
-                <th>Décembre</th>
+                @foreach(array_keys($arrayCosts[$annee]) as $mois )
+                  <th>{{$mois}}</th>
+                @endforeach
               </thead>
             </tbody>
               <tr align="center">
-                <td>{{$countJan}}.-</td>
-                <td>{{$countFev}}.-</td>
-                <td>{{$countMar}}.-</td>
-                <td>{{$countAvr}}.-</td>
-                <td>{{$countMai}}.-</td>
-                <td>{{$countJui}}.-</td>
-                <td>{{$countJuil}}.-</td>
-                <td>{{$countAou}}.-</td>
-                <td>{{$countSep}}.-</td>
-                <td>{{$countOct}}.-</td>
-                <td>{{$countNov}}.-</td>
-                <td>{{$countDec}}.-</td>
+                @foreach($arrayCosts[$annee] as $cost)
+                  <td class="col-1">
+                    {{ array_sum($cost).'.-' }}
+                  </td>
+                @endforeach
               <tr>
+                
             </table>
           </div>
         </div>
       </div>
     </div>
+    @endforeach
   </div>
 </div>
 @endsection
