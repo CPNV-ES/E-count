@@ -7,6 +7,7 @@
 
 <style>
 .vertical {
+  width: 60px;
   display: inline-block;
   -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
   transform: rotate(-90deg);
@@ -56,7 +57,7 @@
                   <td class="col-1">
                     <div class="container mb-4 mt-4">
                       <div class="progress vertical">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width: {{100*$countJan/$max}}%;"></div>  
+                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width: {{100}}%;"></div>  
                       </div>
                     </div>
                     <div>
