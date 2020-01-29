@@ -110,11 +110,7 @@
   <script src="{{ asset('assets') }}/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
 
 <script>
-<<<<<<< HEAD
-    var costs = <?php echo json_encode($costsArray ?? ''); ?>;
-=======
     
->>>>>>> Stats_Mongodb_JS
 </script>
   <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="{{ asset('assets') }}/demo/demo.js"></script>

@@ -36,6 +36,7 @@ class HomeController extends Controller
 
         $costs=Cost::where('users', $id)->where('status', 'paye')->get();   
         $arrayCosts=array();
+        $maximum=array();
 
         foreach(json_decode($costs) as $cost) {
 
@@ -49,7 +50,8 @@ class HomeController extends Controller
                     $monthName = $dateObj->format('F');
 
                     $arrayCosts[$annee[1]][$monthName][] = $cost->price; 
-                    
+                    $maximum[$annee[1]][] = $cost->price;
+
                     uksort($arrayCosts[$annee[1]], function($a1, $a2) {
                         $time1 = strtotime($a1);
                         $time2 = strtotime($a2);
@@ -61,7 +63,8 @@ class HomeController extends Controller
                 
             } 
         }
+        
 
-        return view('home',compact('arrayCosts'));
+        return view('home',compact('arrayCosts','maximum'));
     }
 }

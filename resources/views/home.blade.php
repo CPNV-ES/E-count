@@ -55,23 +55,23 @@
               <tr align="center">
                 @foreach($arrayCosts[$annee] as $cost)
                   <td class="col-1">
-                    <div class="container mb-4 mt-4">
+                    <div class="container mb-5 mt-4">
                       <div class="progress vertical">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width: {{100}}%;"></div>  
+                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width: {{100*array_sum($cost)/array_sum($maximum[$annee])}}%;"></div>  
                       </div>
                     </div>
                     <div>
-                    {{ array_sum($cost).'.-' }}
+                      {{ array_sum($cost).'.-' }}
                     </div>
                   </td>
                 @endforeach
-              <tr>
-                
+              <tr>  
             </table>
           </div>
         </div>
       </div>
     </div>
+
     @endforeach
   </div>
 </div>
