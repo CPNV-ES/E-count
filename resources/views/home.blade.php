@@ -46,13 +46,20 @@
             <table class="table">
             <tbody>
               <thead class=" text-primary" align="center">
+              <?php $i = 0 ?>
                 @foreach(array_keys($arrayCosts[$annee]) as $mois )
                   <th>{{$mois}}</th>
+                  @foreach($arrayCosts[$annee][$mois] as $count)
+                    <?php $i += $count ?>
+                  @endforeach
+                  
                 @endforeach
+                <h6>Total : {{$i}}.-</h6>
               </thead>
 
             </tbody>
               <tr align="center">
+              
                 @foreach($arrayCosts[$annee] as $cost)
                   <td class="col-1">
                     <div class="container mb-5 mt-4">
